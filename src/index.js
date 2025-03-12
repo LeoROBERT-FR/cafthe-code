@@ -1,17 +1,48 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './styles/index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+/*import React from 'react';
+import './styles/App.css';
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h1>Bienvenue sur notre boutique en ligne !</h1>
+        <p>Découvrez nos produits incroyables et nos offres spéciales !</p>
+        <button onClick={() => alert('Buy Now !')}>Buy Now !</button>
+      </header>
+      <main>
+        <section className="products">
+          <h2>Produits populaires :</h2>
+          <div className="product-list">
+            <div className="product-item">
+              <img src="../assets/images/sachet-café.png" alt="Café Test" />
+              <h3>Café Test</h3>
+              <p>Prix: 200€</p>
+            </div>
+            <div className="product-item">
+              <img src="../assets/images/sachet-thé.png" alt="Thé Test" />
+              <h3>Thé Test</h3>
+              <p>Prix: 300€</p>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <p>&copy; 2025 CafThé. Tous droits réservés.</p>
+      </footer>
+    </div>
+  );
+}
+
+export default App;*/

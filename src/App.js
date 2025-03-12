@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+// npm install web-vitals
+// npm install react-scripts
+// npm install axios
+// npm install react-app-rewired
+import React from 'react';
+import { BrowserRouter as BR, Route, Routes } from "react-router-dom";
+import './styles/App.css';
+import Layout from "./layout/Layout";
+import HomePage from "./pages/HomePage";
+import ProductList from "./components/ProductList";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    return (
+        <BR>
+            <Routes>
+                <Route path="/" element={<Layout />}>
+                    <Route index element={<HomePage />} />
+                    <Route path="/products" element={<ProductList />} />
+                    <Route path="*" element={<HomePage />} />
+                </Route>
+            </Routes>
+        </BR>
+    );
+};
 
 export default App;
