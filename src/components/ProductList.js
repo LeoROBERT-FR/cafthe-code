@@ -9,7 +9,7 @@ const ProductList = () => {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await axios.get(`https://api-cafthe.leo.robert.dev-campus.fr/api/products/products/`)
+                const response = await axios.get(`https://api-cafthe.leo.robert.dev-campus.fr/api/products/products`)
                 setProducts(response.data);
             } catch (error) {
                 console.error("Erreur de chargement des produits", error);
