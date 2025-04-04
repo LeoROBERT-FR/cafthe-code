@@ -1,0 +1,10 @@
+.products {
+    border: 1px solid #000000;
+    width: 300px;
+    border-radius: 20px;
+    background-color: #9a9a9a;
+}
+
+.product-item {
+    text-align: center;
+}

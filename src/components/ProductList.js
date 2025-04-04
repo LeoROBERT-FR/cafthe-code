@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import ProductCard from "./ProductCard";
+import "../styles/Liste.css"
 
 const ProductList = () => {
     const [products, setProducts] = useState([]);
@@ -8,7 +9,7 @@ const ProductList = () => {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/products`)
+                const response = await axios.get(`https://api-cafthe.sacha.allardin.dev-campus.fr/api/produits`)
                 setProducts(response.data);
             } catch (error) {
                 console.error("Erreur de chargement des produits", error);
@@ -18,11 +19,13 @@ const ProductList = () => {
     }, [])
 
     return (
-        <div className="product-list">
+        <div style={{display: 'flex', alignItems:"center", flexDirection: 'column'}}>
             <h2>Nos Produits</h2>
-            {products.map(product => (
-                <ProductCard product={product} />
-            ))}
+            <div className="product-list">
+                {products.map(product => (
+                    <ProductCard product={product} />
+                ))}
+            </div>
         </div>
     );
 };

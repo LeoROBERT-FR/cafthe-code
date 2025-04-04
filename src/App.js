@@ -8,7 +8,8 @@ import { BrowserRouter as BR, Route, Routes } from "react-router-dom";
 import './styles/App.css';
 import Layout from "./layout/Layout";
 import HomePage from "./pages/HomePage";
-import ProductList from "./components/ProductList";
+import ProductDetails from "./pages/ProductDetails";
+import ProductPage from "./pages/ProductPage";
 
 const App = () => {
     return (
@@ -16,7 +17,8 @@ const App = () => {
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route index element={<HomePage />} />
-                    <Route path="/products" element={<ProductList />} />
+                    <Route path="/products" element={<ProductPage />} />
+                    <Route path="/products/:id" element={<ProductDetails />} />
                     <Route path="*" element={<HomePage />} />
                 </Route>
             </Routes>
