@@ -11,11 +11,11 @@ function ProductDetails() {
         const fetchProduits = async () => {
             try {
                 const response = await axios.get(
-                    `api-cafthe.leo.robert.dev-campus.fr/api/products/${id}`,
+                    `api-cafthe.leo.robert.dev-campus.fr/api/products/products/${id}`,
                 );
                 setProduits(response.data);
             } catch (error) {
-                console.error("Erreur de chargement des produits ", error);
+                console.error("Erreur de chargement des produits.", error);
             }
         };
         void fetchProduits();
