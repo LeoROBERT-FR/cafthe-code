@@ -11,7 +11,7 @@ function ProductDetails() {
         const fetchProduits = async () => {
             try {
                 const response = await axios.get(
-                    `https://api-cafthe.leo.robert.dev-campus.fr/api/products/products${id}`,
+                    `https://api-cafthe.leo.robert.dev-campus.fr/api/products${id}`,
                 );
                 setProduits(response.data);
             } catch (error) {
