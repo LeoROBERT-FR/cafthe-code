@@ -9,8 +9,9 @@ const ProductList = () => {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await axios.get(`https://api-cafthe.leo.robert.dev-campus.fr/api/products`)
+                const response = await axios.get(`http://localhost:4000/api/products`)
                 setProducts(response.data);
+                console.log(response.data);
             } catch (error) {
                 console.error("Erreur de chargement des produits", error);
             }
@@ -23,7 +24,7 @@ const ProductList = () => {
             <h2>Nos Produits</h2>
             <div className="product-list">
                 {products.map(product => (
-                    <ProductCard product={product} />
+                    <ProductCard product={product} key={`${product.Id_Produit}`} />
                 ))}
             </div>
         </div>

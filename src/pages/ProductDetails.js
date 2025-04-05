@@ -11,8 +11,9 @@ function ProductDetails() {
         const fetchProduits = async () => {
             try {
                 const response = await axios.get(
-                    `https://api-cafthe.leo.robert.dev-campus.fr/api/products${id}`,
+                    `http://localhost:4000/api/products/${id}`,
                 );
+                console.log(response.data);
                 setProduits(response.data);
             } catch (error) {
                 console.error("Erreur de chargement des produits.", error);
@@ -68,11 +69,11 @@ function ProductDetails() {
                                 }}
                             >
                                 <div>
-                                    <h2>{produits.Designation_Article}</h2>
+                                    <h2>{produits.Titre_Produit}</h2>
                                 </div>
                                 <div>
-                                    <p>Prix : {produits.Prix_unitaire_Article} €</p>
-                                    <p>{produits.Description_Article}</p>
+                                    <p>Prix : {produits.Prix_Unitaire_Produit} €</p>
+                                    <p>{produits.Description_Produit}</p>
                                 </div>
                             </div>
                         </div>
