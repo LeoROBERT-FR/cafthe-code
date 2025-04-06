@@ -4,7 +4,7 @@
 // npm install axios
 // npm install react-app-rewired
 import React from 'react';
-import { BrowserRouter as BR, Route, Routes } from "react-router-dom";
+import { HashRouter as BR, Route, Routes } from "react-router-dom";
 import './styles/App.css';
 import Layout from "./layout/Layout";
 import HomePage from "./pages/HomePage";
