@@ -19,11 +19,11 @@ function Register(props) {
         e.preventDefault();
         setErrorMsg('');
         if (name === '' || phone === '' || email === '' || password === '' || adress === '') {
-            setErrorMsg('Tout les champs obligatoire ne sont pas rempli');
+            setErrorMsg('Tous les champs obligatoires ne sont pas remplis ! ');
             return;
         }
         try {
-            const response = await axios.post('http://localhost:4000/api/register', {
+            const response = await axios.post('https://api-cafthe.leo.robert.dev-campus.fr/api/register/', {
                 name, birthday, phone, email, password, adress
             })
             const {token, client} = response.data;
@@ -106,7 +106,7 @@ function Register(props) {
                     )}
 
                     <button type={'submit'} className={'link--primary log--btn'}>
-                        Se créer un compte
+                        Inscription
                     </button>
                 </div>
 

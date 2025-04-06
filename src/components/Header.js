@@ -12,8 +12,8 @@ const Header = () => {
                 <ul>
                     <li><Link to="/">Acceuil</Link></li>
                     <li><Link to="/products">Produits</Link></li>
-                    <li><Link to="/login">Se Connecter</Link></li>
-                    <li><Link to="/register">Se Creer</Link></li>
+                    <li><Link to="/login">Connexion</Link></li>
+                    <li><Link to="/register">Inscription</Link></li>
                 </ul>
             </nav>
         </header>

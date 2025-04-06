@@ -17,7 +17,7 @@ function LoginPage(props) {
                 return;
             }
             try {
-                const response = await axios.post('http://localhost:4000/api/login', {email, password})
+                const response = await axios.post('https://api-cafthe.leo.robert.dev-campus.fr/api/login/', {email, password})
                 console.log(response.data);
                 const { token, client } = response.data
 
